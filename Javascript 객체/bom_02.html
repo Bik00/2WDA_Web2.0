@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>윈도우 속성</title>
+    <h4>윈도우 화면 속성</h4>
+    <script>
+      function dateinbar () {
+        var d = new Date();
+        var y = d.getFullYear();
+        var m = d.getMonth()+1;
+        var d = d.getDate();
+        var t = m+ '/'+ d +'/'+y+'';
+        defaultStatus = "당신의 페이지 방문일은 "+t+"입니다.";
+      }
+    </script>
+  </head>
+  <body bgcolor="FFFFcc" onload="dateinbar()">
+
+  </body>
+</html>

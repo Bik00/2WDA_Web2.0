@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>열리는 문서의 이동</title>
+  </head>
+  <body bgColor="lightblue">
+    <script>
+      var winObj=null;
+      function directions() {
+        winObj=window.open("bom_04.html", "예제639", "width=200, height=300, resizable=no");
+        winObj.moveTo(0,0);
+        winObj.focus();
+        parent.window.moveTo(215,0);
+        parent.window.resizeTo(400,400);
+      }
+      function closeWindow() {winObj.close();}
+    </script>
+    <h2>열리는 윈도우의 이동!</h2> 새로운 크기의 변경<br>
+    버튼을 클릭하세요!
+    <form><input type="button" value="bom_04.html" onClick="directions();">
+      <p>문서가 열렸으면 닫기 버튼을 클릭하세요.<br></p></form>
+      <a href="javascript:closeWindow()">문서닫기</a>
+  </body>
+</html>

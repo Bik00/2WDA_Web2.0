@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>History Object</title>
+  </head>
+  <body bgColor="lightblue">
+    <script>
+      function loadPage(urlAddress) {parent.frames[1].location.href=urlAddress; }
+    </script>
+    <big>
+      <form name="form1" id="form1">
+        <input type="button" value="영진" onClick="loadPage('http://www.yjc.ac.kr');">
+        <input type="button" value="다음" onClick="loadPage('http://www.daum.net');">
+        <input type="button" value="네이트" onClick="loadPage('http://www.nate.com');">
+      </form>
+      <form name="form2" id="form2">
+        <input type="button" value="go back" onClick="javascript:history.go(-1);">
+        <input type="button" value="go forward" onClick="javascript:history.go(1);">
+      </form>
+    </big>
+  </body>
+</html>

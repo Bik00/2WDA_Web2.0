@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>윈도우 속성</title>
+  </head>
+  <body>
+    <h4> 윈도우 닫기/열기/인쇄 메소드 사용 </h4>
+    <script>
+      var windo = null;
+      function inWindow() {
+        windo = window.open("예제.html");
+      }
+      function outWindow() {
+        if(windo != null) {
+          window.close();
+        }
+      }
+    </script>
+  </body>
+  <form>
+    <input type="button" value="윈도우 open" onClick="inWindow()" />
+    <input type="button" value="윈도우 exit" onClick="outWindow()" />
+    <input type="button" value="내용 인쇄하기" onClick="window.print()" />
+  </form>
+</html>

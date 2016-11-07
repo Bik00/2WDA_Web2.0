@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>새로운 윈도우에 이미지 열기/닫기</title>
+    <script>
+      function newWindow() {
+        winObj=window.open("winter.jpg", "겨울배경", "width='548px'", "height='361px'", "resizable=yes, scrollbar=yes, location=yes");
+        winObj.focus();
+      }
+      function closeWindow() {winObj.close();}
+      </script>
+  </head>
+  <body bgColor="lightblue">
+    <h2>시골의 겨울배경 입니다!</h2>
+    <h3>연결되어 있는 겨울 배경 단추를 클릭하세요!<br>
+    <a href="javascript:newWindow()">겨울배경 열기</a>
+    <p>겨울 배경을 닫으실려면 이 단추를 클릭하세요!<br>
+    <a href="javascript:closeWindow()">겨울배경 닫기</a>
+    </h3>
+  </body>
+</html>
