@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 : String 관련</title>
+  </head>
+  <body>
+    <script>
+      function changeMoney(){
+        var f = document.myForm;
+        var tempString= "";
+        var rsString= "";
+        tempString= f.beforeValue.value;
+        tempString= tempString.replace(/,/g,''); //정규표현식: ,를찾아모두없앰
+
+        for(x = 1; x <= tempString.length; x++){
+          if(x > 1 && (x%3) == 1) {
+            rsString= tempString.charAt(tempString.length-x) + "," + rsString;
+          }else{
+            rsString= tempString.charAt(tempString.length-x) + rsString;
+          }
+        }
+        f.afterValue.value= rsString;
+      }
+    </script>
+    <form name="myForm">
+      <input type="text" name="beforeValue"><br>
+      <input type="button" value="바꾸기" onClick="changeMoney();"><br>
+      <input type="text" name="afterValue">
+    </form>
+  </body>
+</html>

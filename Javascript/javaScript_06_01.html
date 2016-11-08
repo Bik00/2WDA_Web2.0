@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>논리연산자 비교 식</title>
+  </head>
+  <body>
+    <script>
+      var x = true;
+      var y = false;
+
+      var result1 = (x&&y);
+      var result2 = (x||y);
+      document.writeln(result1+" "+result2+"<br>");
+
+      y=true;
+      var result1 = (x&&y);
+      var result2 = (x||y);
+      document.writeln(result1+" "+result2+"<br>");
+
+      x="honest";
+      var result1 = (x&&y);
+      var result2 = (x||y);
+      document.writeln(result1+" "+result2+"<br>");
+
+      x=true;
+      y=" ";
+      var result1 = (x&&y);
+      var result2 = (x||y);
+      document.writeln(result1+" "+result2+"<br>");
+
+      x=null;
+      y=null;
+      var result1 = (x&&y);
+      var result2 = (x||y);
+      document.writeln(result1+" "+result2+"<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>내장함수 - Array</title>
+  </head>
+  <body>
+    <script>
+      var myArray=new Array();
+      var titleArray=new Array("동호수를","이름을","평수를","방갯수를","화장실 갯수를");
+      i=0; k=0;flag=0;
+      while(confirm("아파트 정보를 입력할까요?")) {
+        myArray[i]=new Array();
+        for(j=0 ; j<5 ; j++) {
+          myArray[i][j]=prompt(titleArray[j]+" 입력해주세요","");
+        }
+        i++;
+      }
+      document.write("<table border='1' width='500'>");
+      document.write("<tr><td>동호수</td><td>이름</td><td>평수</td><td>방갯수</td>");
+      document.write("<td>욕실갯수</td></tr>");
+      for(i=0;i<myArray.length;i++) {
+        document.write("<tr>");
+        for(j=0;j<myArray[i].length;j++) {
+          document.write("<td>"+myArray[i][j]+"</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

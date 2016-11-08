@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Form example</title>
+  </head>
+    <script>
+      function getInfoD() {
+        var info;
+        var f = document.forms["testForm"];
+        info = "f.elements: " + f.elements+ "\n"
+        + "f.length: " + f.length+ "\n"
+        + "f.name: " + f.elements+ "\n"
+        + "f.acceptCharset: " + f.acceptCharset+ "\n"
+        + "f.action: " + f.action+ "\n"
+        + "f.enctype: " + f.enctype+ "\n"
+        + "f.encoding: " + f.encoding+ "\n"
+        + "f.method: " + f.method+ "\n"
+        + "f.target: " + f.target;
+        document.forms["testForm"].elements['text'].value = info;
+      }
+      function getInfo(f) {
+        f.method= "GET";
+        f.action= "chapter4_4_2.jsp";
+        f.name = "totally_new";
+      }
+    </script>
+  <body>
+    <h1>이것이폼입니다.!! </h1>
+    <form name="testForm" id="testForm"action="chapter4_4_1_2.jsp" method="POST">
+    <p>
+      <input type="button" value="정보" onclick="getInfoD();">
+      <input type="button" value="설정" onclick="getInfo(this.form);">
+      <input type="reset" value="Reset">
+      <br/>
+      <textarea id="text" style="height:15em; width:20em"></textarea>
+    </p>
+    </form>
+  </body>
+</html>

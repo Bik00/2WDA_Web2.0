@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>내장함수 - parsefloat</title>
+  </head>
+  <body>
+    <script>
+      function parse(){
+        var f = document.form1;
+        var x = new Array();
+        x[0] = "parseFloat(128)= " + parseFloat("128") +"\n";
+        x[1] = "parseFloat(3.14)= " + parseFloat("3.14")+"\n";
+        x[2] = "parseFloat(3.14.87)= " + parseFloat("3.14.87")+"\n";
+        x[3] = "parseFloat(18000원)= " + parseFloat("18000원")+"\n";
+        x[4] = "parseFloat(18000.05원)= " + parseFloat("18000.05원")+"\n";
+        x[5] = "parseFloat(10.20.30)= " + parseFloat("10.20.30")+"\n";
+        f.result.value=x;
+      }
+    </script>
+    <form name="form1">
+      <center>
+        <h1> parseFloat테스트입니다</h1><br/>
+        <input type="button" value="확인" onclick="parse()">&nbsp;&nbsp;
+        <input type="button" value="지우기" onclick="reset()"><br/>
+        <textarea name="result" style="height:15em; width:30em"> </textarea>
+      </center>
+    </form>
+  </body>
+</html>

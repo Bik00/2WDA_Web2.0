@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event 2</title>
+  </head>
+  <body>
+    <script>
+      function onChangeUpperCase(a)
+      {
+        var myID= document.getElementById(a).value;
+        document.getElementById(a).value= myID.toUpperCase();
+      }
+    </script>
+    Enter your name:<input type="text" value="test" id="myName" onchange="onChangeUpperCase(this.id)" />
+  </body>
+</html>

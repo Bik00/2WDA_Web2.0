@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>내장함수 : escape</title>
+  </head>
+  <body>
+    <script>
+      function changeEscape(){
+        var str= "";
+        str= "황사가점점심해지네요. 마스크가필수품이될것같네요!! ";
+        str= str+ "?!=()#%& ";
+        str= str+ "This is english!!";
+        alert(escape(str));
+      }
+    </script>
+    <input type="button" value="escape()변환" onClick="changeEscape()">
+    <script>
+      function changeUnescape(){
+        var str= "";
+        str= "유혹적인팜므파탈, 구스타프클림트";
+        str= str+ "-1862.7.14~1918.2.6";
+        str= str+ "-Gustav Klimt is Austrian, a painter";
+        str= escape(str);
+        document.write("escape() => " + str+ "<br/>");
+        alert("unescape=> " + unescape(str));
+      }
+    </script>
+    <input type="button" value="unescape()변환" onClick="changeUnescape()">
+  </body>
+</html>

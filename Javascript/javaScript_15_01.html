@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Try Catch 문 Sample!!</title>
+    <script type="text/javascript">
+      function myMsg()
+      {
+        var str;
+        try {
+          adddlert("어서오세요!");
+        } catch(e) {
+          str="에러가 발생했습니다. \n\n";
+          str+="Error description: " + e.description+ "\n\n";
+          str+="계속하시려면 OK 버튼을 눌러주세요!.\n\n";
+          alert(str);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="메세지보기" onclick="myMsg()" />
+  </body>
+</html>

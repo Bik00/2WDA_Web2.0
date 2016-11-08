@@ -1,0 +1,13 @@
+<html> <head> <title>eval예제</title>
+<script>
+function evalSample() {
+var first, second, third, total;
+first = prompt("첫번째 숫자를 입력해주세요!", "20");
+second = prompt("연산자를 입력해주세요!", "*");
+third = prompt("두번째 숫자를 입력해주세요!", "50");
+total = eval(parseInt(first) + second + parseInt(third));
+alert("first 과 third의 값을 second의 연산자로 처리한 수= " + total);
+}
+</script> </head>
+<body> <input type="button" value="눌러보아요!" onclick="evalSample();" />
+</body></html>

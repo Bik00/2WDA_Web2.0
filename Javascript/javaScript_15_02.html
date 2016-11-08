@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Throw 문 예제 Sample!!</title>
+  </head>
+  <body>
+    <script>
+      var value = prompt("0부터 10까지 중의 숫자를 입력하세요!","");
+      try
+      {
+        if(value > 10)throw"myError1";
+        else if(value < 0) throw"myError2";
+      } catch(e) {
+        if (e=="myError1") alert("너무 큰 숫자를 입력하였습니다!");
+        if (e == "myError2") alert("너무 작은 숫자를 입력하였습니다!");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>onMouseDown() : 마우스 버튼을 누르면</title>
+    <script>
+      function choiceRange(eEvent){
+        if (!eEvent) { vareEvent= window.event; }
+        if (eEvent.target) { choice = eEvent.target; }
+        else if (eEvent.srcElement){choice = eEvent.srcElement;}
+        if (choice.nodeType== 3){choice = choice.parentNode;}
+        var tname;
+        tname = choice.tagName;
+        alert(" 마우스를 눌렀네요? " + tname+ " 영역을 누르셨네요");
+      }
+    </script>
+  </head>
+    <body onmousedown="choiceRange(event)">
+      <h2> H2 영역입니다.</h2>
+      <p> Paragraph 영역입니다. </p>
+      <imgborder="0" src="chapter5-7-6.jpg" alt="myBall">
+  </body>
+</html>

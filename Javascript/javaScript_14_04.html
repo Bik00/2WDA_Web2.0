@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event-onfocus</title>
+  </head>
+  <body>
+    <script>
+      function setColor(color)
+      {
+        document.getElementById(color).style.background="red";
+      }
+    </script>
+    오늘 저녁에 먹을 음식은? : <input type="text" onfocus="setColor(this.id)" id="first"><br/>
+    디져트로는 무얼 먹을거죠? : <input type="text" onfocus="setColor(this.id)" id="name">
+  </body>
+</html>

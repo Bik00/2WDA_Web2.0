@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>onMouseOver() / onMouseOut()</title>
+  </head>
+  <body>
+    onMouseOver() / onMouseOut()
+    – 객체 위에 마우스 포인트를 옮길때 / 객체 박스 밖으로 옮길때
+    <script>
+      function OverFunction(){ document.myImage.src="mars.png";}
+      function OutFunction(){ document.myImage.src="earth.png";}
+    </script>
+    <a href="http://www.naver.com" target="_blank" onmouseover="OverFunction()"onmouseout="OutFunction()">
+      <img border="0" alt="Visit naver!!" src="earth.png" name="myImage" />
+    </a>
+  </body>
+</html>

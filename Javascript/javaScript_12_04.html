@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>내장함수 - parseInt()</title>
+  </head>
+  <body>
+    <script>
+      function parse(){
+        var f = document.form1; var x = new Array();
+        x[0] = "parseInt(128)= " + parseInt("128") +"\n";
+        x[1] = "parseInt(3.14)= " + parseInt("3.14")+"\n";
+        x[2] = "parseInt(0811)= " + parseInt("0811")+"\n";
+        x[3] = "parseInt(18000원)= " + parseInt("18000원")+"\n";
+        x[4] = "parseInt(13,8)= " + parseInt("13",8)+"\n";
+        x[5] = "parseInt(28,16)= " + parseInt("28",16)+"\n";
+        x[6] = "parseInt(0x11)= " + parseInt("0x11")+"\n";
+        x[7] = "parseInt(10 20 30)= " + parseInt("10 20 30")+"\n";
+        f.result.value=x;
+      } </script>
+    <form name="form1">
+      <center>
+        <h1> ParseInt테스트입니다</h1><br/>
+        <input type="button" value="확인" onclick="parse()">&nbsp;&nbsp;
+        <input type="button" value="지우기" onclick="reset()"><br/>
+        <textarea name="result" style="height:15em; width:30em"></textarea>
+      </center>
+    </form>
+  </body>
+</html>

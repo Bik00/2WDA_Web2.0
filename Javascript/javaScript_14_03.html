@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event 3</title>
+  </head>
+  <body>
+    <script>
+      function copyString(){
+        var second = document.getElementById('string2');
+        var first = document.getElementById('string1');
+        second.value= first.value;
+      }
+    </script>
+      Field1: <input type="text" id="string1" value="황사가 왜이리 심하지?"><br/>
+      Field2: <input type="text" id="string2"><br/><br/>
+      <button onclick="copyString()">글자 복사</button>
+  </body>
+</html>

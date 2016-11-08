@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>비교 연산자 수식</title>
+  </head>
+  <body>
+    <script>
+      var x;
+      var y;
+      var result;
+
+      x="KOREA";
+      y="KOREA";
+
+      result = (x==y);
+      document.writeln(result);
+      result = (x===y);
+      document.writeln(result);
+
+      document.writeln("<br><br>");
+
+      x = "korea";
+      result = (x==y);
+      document.writeln(result);
+      result = (x===y);
+      document.writeln(result);
+
+      document.writeln("<br><br>");
+
+      x=6;
+      y=6.0;
+
+      result = (x==y);
+      document.writeln(result);
+      result = (x===y);
+      document.writeln(result);
+
+      document.writeln("<br><br>");
+
+      x=NaN;
+      y=NaN;
+
+      result = (x==y);
+      document.writeln(result);
+      result = (x===y);
+      document.writeln(result);
+
+      document.writeln("<br><br>");
+
+      x=null;
+      y=null;
+
+      result = (x==y);
+      document.writeln(result);
+      result = (x===y);
+      document.writeln(result);
+
+      document.writeln("<br><br>");
+
+      x=null;
+      y=undefined;
+
+      result = (x==y);
+      document.writeln(result);
+      result = (x===y);
+      document.writeln(result);
+
+      document.writeln("<br><br>");
+
+    </script>
+  </body>
+</html>
