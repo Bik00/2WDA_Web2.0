@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JSON을 이용한 객체 작성</title>
+  </head>
+  <body>
+    <script>
+      Student = function(name, korean, math, english, society, science) {
+        this.이름 = name;
+        this.언어=korean;
+        this.수리=math;
+        this.외국어=english;
+        this.사탐=society;
+        this.과탐=science;
+      }
+
+      Student.prototype={
+        getSum:function(){
+          return this.언어+this.수리+this.외국어+this.사탐+this.과탐;
+        },
+        getAverage:function(){
+          return this.getSum()/5;
+        },
+        toString:function(){
+          return this.이름+ '\t' + this.getSum() + '\t'+ this.getAverage();
+        }
+      };
+      var students=[];
+      students.push(new Student('김영진',85,92,82,78,95));
+      students.push(new Student('이컴정',82,84,90,92,90));
+      students.push(new Student('박웹디',96,98,100,96,100));
+      var output = '이름\t총점\t평균\n';
+      for(var i in students){
+        output+=students[i].toString()+'\n';
+      }
+      console.log(output);
+    </script>
+  </body>
+</html>

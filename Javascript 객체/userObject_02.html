@@ -1,0 +1,25 @@
+<html>
+  <head> <title>for/in 문</title>
+    <script>
+      function book(title, author, publisher) {
+      this.title= title;
+      this.author= author;
+      this.publisher= publisher;
+      this.show= show;
+      }
+      function show(obj, name) {
+      var result = "";
+      for(var prop in obj) {
+      result += name + "." + prop + " = " + obj[prop] + "<br>";
+      }
+      return result;
+      }
+    </script>
+  </head>
+  <body bgcolor="lightblue">
+    <script>
+      myBook=new book("자바스크립트프로그래밍", "강양원, 조범석", "북스홀릭");
+      document.write("<br/><br/>" + myBook.show(myBook, "myBook"));
+    </script>
+  </body>
+</html>
